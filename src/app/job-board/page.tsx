@@ -188,6 +188,7 @@ export default function JobBoardPage() {
                         width={56} 
                         height={56}
                         className="object-cover h-full w-full"
+                        unoptimized
                       />
                     </div>
                     

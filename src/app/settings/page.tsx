@@ -120,6 +120,7 @@ export default function SettingsPage() {
                         width={96} 
                         height={96}
                         className="object-cover h-full w-full"
+                        unoptimized
                       />
                     ) : (
                       <UserCircleIcon className="h-full w-full text-gray-400" />

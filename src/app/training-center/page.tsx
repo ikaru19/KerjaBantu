@@ -333,6 +333,7 @@ export default function TrainingCenterPage() {
                         width={48} 
                         height={48}
                         className="object-cover h-full w-full"
+                        unoptimized
                       />
                     </div>
                     <div>
@@ -400,6 +401,7 @@ export default function TrainingCenterPage() {
                         width={80} 
                         height={80}
                         className="object-cover h-full w-full"
+                        unoptimized
                       />
                     </div>
                     <h3 className="font-semibold text-lg">{mentor.name}</h3>
