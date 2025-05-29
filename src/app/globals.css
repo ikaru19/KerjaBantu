@@ -1,26 +1,90 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary: #FF3B30;
+  --primary-dark: #CC2F26;
+  --primary-light: #FFD8D6;
+  --accent: #FF3B30;
+  --accent-dark: #CC2F26;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --success: #4CD964;
+  --warning: #FF9500;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: var(--text-dark);
+  min-height: 100vh;
+  font-family: var(--font-poppins);
 }
+
+h1, h2, h3 {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+p, span, label, a {
+  color: var(--text-light);
+  font-family: var(--font-poppins);
+}
+
+input, textarea, select {
+  background-color: white;
+  color: var(--text-dark);
+  border-color: #d1d5db;
+  transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(51, 102, 255, 0.15);
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-full font-medium transition-all duration-200 shadow-sm;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-[#FF3B30] to-[#FF5E54] text-white hover:shadow-md hover:translate-y-[-2px];
+  }
+  
+  .btn-outline {
+    @apply border-2 border-[#FF3B30] text-[#FF3B30] hover:bg-[#FF3B30] hover:text-white hover:shadow-md hover:translate-y-[-2px];
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .form-container {
+    @apply bg-white shadow-lg rounded-2xl p-6 border border-gray-100;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-200 overflow-hidden border border-gray-100;
+  }
+
+  .highlight-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#FF3B30] to-[#FF9500] font-bold;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold mb-6 text-center;
+  }
+} 
