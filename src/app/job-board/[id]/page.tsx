@@ -329,13 +329,14 @@ export default function JobDetailsPage() {
         {/* Job header */}
         <Card className="p-6 mb-6">
           <div className="flex flex-col md:flex-row md:items-center gap-6">
-            <div className="h-20 w-20 rounded-full overflow-hidden bg-gray-100 flex-shrink-0">
+            <div className="h-16 w-16 rounded-full overflow-hidden bg-gray-100 flex-shrink-0 mb-3">
               <Image 
                 src={job.logo} 
                 alt={job.company} 
-                width={80} 
-                height={80}
+                width={64}
+                height={64}
                 className="object-cover h-full w-full"
+                unoptimized
               />
             </div>
             

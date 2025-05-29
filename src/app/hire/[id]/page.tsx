@@ -141,8 +141,10 @@ export default function HirePage() {
                   <Image
                     src={kerjaMate.avatar}
                     alt={kerjaMate.name}
-                    fill
+                    width={128}
+                    height={128}
                     className="object-cover"
+                    unoptimized
                   />
                 </div>
                 
