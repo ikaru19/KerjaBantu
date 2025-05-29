@@ -25,8 +25,10 @@ const KerjaMateCard: FC<KerjaMateCardProps> = ({
             <Image
               src={kerjaMate.avatar}
               alt={kerjaMate.name}
-              fill
+              width={80}
+              height={80}
               className="object-cover"
+              unoptimized
             />
           </div>
           

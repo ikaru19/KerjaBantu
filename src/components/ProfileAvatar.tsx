@@ -41,11 +41,12 @@ const ProfileAvatar = ({ src, alt, size = 40, className = "" }: ProfileAvatarPro
       <Image
         src={imageSrc}
         alt={alt}
-        fill
-        sizes={`${size}px`}
+        width={size}
+        height={size}
         className="object-cover"
         onError={handleError}
         priority={size > 60} // Prioritize larger avatars
+        unoptimized
       />
     </div>
   );

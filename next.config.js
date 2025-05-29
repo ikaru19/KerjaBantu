@@ -5,6 +5,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'randomuser.me',
+        pathname: '/api/portraits/**',
       },
       {
         protocol: 'https',
@@ -15,6 +16,8 @@ const nextConfig = {
         hostname: 'unsplash.com',
       },
     ],
+    minimumCacheTTL: 60,
+    domains: ['randomuser.me'],
   },
 };
 
